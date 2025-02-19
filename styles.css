@@ -32,8 +32,10 @@ input[type="text"] {
     margin-top: 10px;
 }
 button {
-    background-color: #f8f9fa;
+    background-color: #1081f1;
     border: 1px solid #dfe1e5;
+    color: white;
+    font-weight: bold;
     padding: 10px 20px;
     font-size: 14px;
     border-radius: 5px;
