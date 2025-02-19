@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gopi weds Deepika</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E9F1FA;
+            margin-left: 50px;
+        }
+
+        .language-switch {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .language-switch button {
+            padding: 5px 10px;
+            margin: 2px;
+            cursor: pointer;
+            border: none;
+            background-color: #1a73e8;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .search-container {
+            text-align: left;
+            padding: 20px;
+        }
+
+        .search-box {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            outline: none;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: left;
+            gap: 20px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tab {
+            color: #5f6368;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .tab.active {
+            font-weight: bold;
+            color: #1a73e8;
+            border-bottom: 3px solid #1a73e8;
+        }
+
+        .invitation {
+            font-family: 'Lucida Sans', serif;
+            text-align: center;
+            background-color: #f8f5e4;
+            border: 2px solid #a52a2a;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switch">
+        <button onclick="translateToEnglish()">English</button>
+        <button onclick="translateToTelugu()">తెలుగు</button>
+    </div>
+
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="Gopi weds Deepika" />
+    </div>
+    <div class="tabs">
+        <div class="tab active">All</div>
+        <div class="tab active">Invitation Card</div>
+        <div class="tab">Images</div>
+        <div class="tab">Videos</div> 
+        <div class="tab">Location</div>
+    </div>
+    
+    <div class="invitation" id="invitation">
+        <h2 id="title">Sriastu Subhamasthu Avignamasthu</h2>
+        <h1 id="heading">Achanti's Wedding Invitation</h1>
+        <p id="invite-text">We cordially solicit your gracious presence with family and friends on the auspicious occasion of the marriage of our son</p>
+        <h2 id="groom">Chi. Gopi Krishna</h2>
+        <p id="groom-details">(Son of Sri Achanti Srinivasa Rao - Smt. Padma, Ananthavaram, Baptla Dist.)</p>
+        <p id="with">with</p>
+        <h2 id="bride">Chi. La. Sow. Deepika</h2>
+        <p id="bride-details">(Daughter of Sri Mandava Bhaskar Rao - Smt. Padmavathi, Inkollu, Prakasam Dist.)</p>
+        <h3 id="muhurtham">Sumuhurtham</h3>
+        <p id="muhurtham-time">On Sunday, 16th March, 2025 at 9:45 p.m. "Kalyana Lagnam"</p>
+        <h3 id="venue">Venue</h3>
+        <p id="venue-details">Mandava Bhaskar Rao's home, Inkollu.</p>
+        <h3 id="dinner">Dinner</h3>
+        <p id="dinner-details">On Sunday, 16th March, 2025 from 7:40 p.m. onwards</p>
+        <h3 id="reception">Reception</h3>
+        <p id="reception-details">Achanti Srinivasa Rao's home, Ananthavaram.</p>
+        <h3 id="reception-dinner">Dinner</h3>
+        <p id="reception-dinner-details">On Tuesday, 18th March, 2025 from 11:00 a.m. onwards</p>
+        <h3 id="invited-by">Invited by</h3>
+        <p id="parents">Sri Achanti Srinivasa Rao- Smt. Padma</p>
+        <p id="footer">With best compliments from: <strong>Achnati Brother's</strong> and Near & Dear</p>
+    </div>
+
+    <script>
+        function translateToTelugu() {
+            document.getElementById("title").innerText = "శ్రియస్తు శుభమస్తు అవిఘ్నమస్తు";
+            document.getElementById("heading").innerText = "ఆచంటి కుటుంబ వివాహ ఆహ్వానం";
+            document.getElementById("invite-text").innerText = "మా కుమారుని వివాహ మహోత్సవానికి మీరు, మీ కుటుంబ సభ్యులతో పాటు హాజరై ఆశీర్వదించగలరు.";
+            document.getElementById("groom").innerText = "చి. గోపీ కృష్ణ";
+            document.getElementById("groom-details").innerText = "(శ్రీ ఆచంటి శ్రీనివాసరావు - శ్రీమతి పద్మ కుమారుడు, అనంతవరంం, బాపట్ల జిల్లా)";
+            document.getElementById("with").innerText = "తో";
+            document.getElementById("bride").innerText = "చి. ల. సౌ. దీపికా";
+            document.getElementById("bride-details").innerText = "(శ్రీ మండవ భాస్కర్ రావు - శ్రీమతి పద్మావతి కుమార్తె, ఇంకోలు, ప్రకాశం జిల్లా)";
+            document.getElementById("muhurtham").innerText = "శుభ ముహూర్తం";
+            document.getElementById("muhurtham-time").innerText = "ఆదివారం, 16 మార్చి 2025, రాత్రి 9:45 గం. ‘కళ్యాణ లగ్నం’";
+            document.getElementById("venue-details").innerText = "మండవ భాస్కర్ రావు గారి నివాసం, ఇంకోలు.";
+        document.getElementById("dinner").innerText = "విందు";
+        document.getElementById("dinner-details").innerText = "ఆదివారం, 16 మార్చి 2025, రాత్రి 7:40 గంటల నుండి";
+        document.getElementById("reception").innerText = "అభినందన";
+        document.getElementById("reception-details").innerText = "ఆచంటి శ్రీనివాసరావు గారి నివాసం, అనంతవరం.";
+        document.getElementById("reception-dinner").innerText = "విందు";
+        document.getElementById("reception-dinner-details").innerText = "మంగళవారం, 18 మార్చి 2025, ఉదయం 11:00 గంటల నుండి";
+        document.getElementById("invited-by").innerText = "ఆహ్వానించిన వారు";
+        document.getElementById("parents").innerText = "శ్రీ ఆచంటి శ్రీనివాసరావు - శ్రీమతి పద్మ";
+        document.getElementById("footer").innerHTML = "ఉత్తమ శుభాకాంక్షలతో: <strong>ఆచంటి బ్రదర్స్</strong> మరియు స్నేహితులు & బంధువులు";
+        }
+        function translateToEnglish() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>
